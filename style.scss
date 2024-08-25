@@ -102,11 +102,11 @@ span.highlight {
 // Website specific
 
 #portrait {
-  border-radius: 50%;
-  width: 100%;
-  max-width: 100%
+  border-radius: 0; /* Remove the circular crop */
+  width: 100%; /* Ensure it scales with the container */
+  max-width: 100%; /* Prevent overflow */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
 }
-
 .project-thumbnail-parent {
   display: grid;
   grid-template-columns: 1fr;
