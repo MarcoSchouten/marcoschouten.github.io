@@ -1,4 +1,4 @@
-<!-- ---
+---
 title:  "Title of the publication"
 date:   2021-07-13 09:26:00 +00:00
 image: /publications/images/project-image.jpg
@@ -14,4 +14,4 @@ bib: |
     year = {2021}
   }
 ---
-Brief description of the project. -->
+Brief description of the project.
