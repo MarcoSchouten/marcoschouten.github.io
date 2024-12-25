@@ -11,101 +11,100 @@
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        margin: 0;
-        padding: 0;
         background-color: #f4f4f4;
       }
       .container {
-        width: 80%;
-        max-width: 1000px;
+        width: 90%;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 0;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
-      .portrait {
+      .row {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+      .col-md-8 {
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+        padding: 20px;
+      }
+      .col-md-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 20px;
         text-align: center;
       }
-      .portrait img {
-        width: 150px;
-        height: 150px;
+      #portrait {
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 20px;
       }
-      .bio h1 {
-        text-align: center;
+      #bio h1 {
         font-size: 2em;
         margin-bottom: 20px;
       }
-      .bio p {
-        text-align: center;
+      #bio p {
         font-size: 1.1em;
-        margin-bottom: 30px;
+        text-align: justify;
+        margin-bottom: 20px;
       }
-      .bio h2 {
-        text-align: center;
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-      .links {
-        text-align: center;
-        margin-top: 20px;
-      }
-      .links a {
-        margin: 0 10px;
+      #bio a {
+        color: #007BFF;
         text-decoration: none;
-        color: #007BFF;
-        font-size: 1.1em;
       }
-      .research ul {
-        list-style-type: none;
-        padding: 0;
-        font-size: 1.1em;
+      #bio a:hover {
+        text-decoration: underline;
       }
-      .research li {
-        margin: 10px 0;
-        padding-left: 20px;
-        position: relative;
+      #bio p.text-center {
+        text-align: center;
       }
-      .research li:before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #007BFF;
+      #bio .links a {
+        margin: 0 10px;
+      }
+      @media (min-width: 768px) {
+        .row {
+          flex-direction: row;
+        }
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="portrait">
-        <img src="images/portrait.jpg" alt="profile photo">
-      </div>
-      <div class="bio">
-        <h1>Marco Schouten</h1>
-        <p>
-          PhD student in Computer Science at the <a href="https://www.compute.dtu.dk/">Technical University of Denmark</a>, affiliated with the <a href="https://www.aicentre.dk/">Pioneer Centre For AI</a> and the <a href="https://www.belongielab.org/">Belongie Lab</a>. Advised by Prof. <a href="https://people.csail.mit.edu/dimpapa/">Dim Papadopoulos</a> and Prof. <a href="https://sergebelongie.github.io/">Serge Belongie</a>.
-        </p>
-        <p>
-          Former research intern at the <a href="https://smarc.se/">Swedish Maritime Robotic Centre</a> and <a href="https://www.aptiv.com/">Aptiv PLC</a>.
-        </p>
-      </div>
-      <div class="research">
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Human-in-the-loop learning</li>
-          <li>Controllable generative AI</li>
-          <li>Stable diffusion</li>
-        </ul>
-      </div>
-      <div class="links">
-        <a href="https://github.com/marcoschouten">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=SdQ_lIIAAAAJ&hl=en">Google Scholar</a>
-        <a href="https://twitter.com/marcoschouten_">Twitter</a>
-        <a href="https://linkedin.com/in/schoutenmarco">LinkedIn</a>
+      <div class="row">
+        <div class="col-md-8" id="bio">
+          <h1>Marco Schouten</h1>
+          <p class="text-justify">
+            PhD student in Computer Science at the <a href="https://www.compute.dtu.dk/">Technical University of Denmark</a>, affiliated with the <a href="https://www.aicentre.dk/">Pioneer Centre For AI</a> and the <a href="https://www.belongielab.org/">Belongie Lab</a>. Advised by Prof. <a href="https://people.csail.mit.edu/dimpapa/">Dim Papadopoulos</a> and Prof. <a href="https://sergebelongie.github.io/">Serge Belongie</a>.
+          </p>
+          <p class="text-justify">
+            Former research intern at the <a href="https://smarc.se/">Swedish Maritime Robotic Centre</a> and <a href="https://www.aptiv.com/">Aptiv PLC</a>.
+          </p>
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Human-in-the-loop learning</li>
+            <li>Controllable generative AI</li>
+            <li>Stable diffusion</li>
+          </ul>
+          <p class="text-center">
+            <a href="mailto:marco@example.com">Email</a> &nbsp;/&nbsp;
+            <a href="https://github.com/marcoschouten">GitHub</a> &nbsp;/&nbsp;
+            <a href="https://twitter.com/marcoschouten_">Twitter</a> &nbsp;/&nbsp;
+            <a href="https://scholar.google.com/citations?user=SdQ_lIIAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+            <a href="https://www.linkedin.com/in/schoutenmarco">LinkedIn</a>
+          </p>
+        </div>
+        <div class="col-md-4" style="z-index:4;">
+          <img alt="profile photo" id="portrait" src="images/portrait.jpg">
+        </div>
       </div>
     </div>
+
+    <!-- Publications Section (Optional) -->
+    {% include publications.html %}
   </body>
 </html>
