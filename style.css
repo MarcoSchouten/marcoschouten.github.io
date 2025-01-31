@@ -46,8 +46,11 @@ header {
 }
 
 .header-content {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-text {
@@ -55,20 +58,21 @@ header {
 }
 
 .greeting {
-  display: block;
-  font-size: 1.1rem;
-  color: var(--link-color);
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  display: inline;
+  font-size: 2.75rem;
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 h1 {
+  display: inline;
   font-size: 2.75rem;
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--text-color);
   line-height: 1.2;
+  margin-left: 0.5rem;
 }
 
 .social-links {
@@ -181,22 +185,28 @@ li::before {
 .affiliations {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
   padding: 1rem;
 }
 
 .affiliation-logo {
-  height: 28px;
+  height: 45px;
   width: auto;
   object-fit: contain;
   filter: grayscale(20%);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .affiliation-link:hover {
   transform: translateY(-1px);
+}
+
+.name-section {
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 600px) {
@@ -219,8 +229,8 @@ li::before {
     text-align: center;
   }
   
-  h1 {
-    font-size: 2.25rem;
+  .greeting, h1 {
+    font-size: 2rem;
   }
   
   .social-links {
@@ -233,12 +243,12 @@ li::before {
   }
 
   .affiliations {
-    gap: 2rem;
-    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 1.5rem;
   }
 
   .affiliation-logo {
-    height: 24px;
+    height: 28px;
   }
   
   h2::before {
@@ -252,5 +262,10 @@ li::before {
   .icon {
     width: 14px;
     height: 14px;
+  }
+
+  .name-section {
+    text-align: center;
+    align-self: center;
   }
 } 
