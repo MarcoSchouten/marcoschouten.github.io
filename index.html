@@ -1,108 +1,50 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <title>Marco Schouten</title>
-    <meta name="author" content="Marco Schouten">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 90%;
-        max-width: 800px; /* Reduced max-width */
-        margin: 0 auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-      .row {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-      }
-      .col-md-8 {
-        flex: 0 0 66.6667%;
-        max-width: 66.6667%;
-        padding: 20px;
-      }
-      .col-md-4 {
-        flex: 0 0 33.3333%;
-        max-width: 33.3333%;
-        padding: 20px;
-        text-align: center;
-      }
-      #portrait {
-        width: 250px; /* Reduced image size */
-        height: 250px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      #bio h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
-      }
-      #bio p {
-        font-size: 1.1em;
-        text-align: justify;
-        margin-bottom: 20px;
-      }
-      #bio a {
-        color: #007BFF;
-        text-decoration: none;
-      }
-      #bio a:hover {
-        text-decoration: underline;
-      }
-      #bio p.text-center {
-        text-align: center;
-      }
-      #bio .links a {
-        margin: 0 10px;
-      }
-      @media (min-width: 768px) {
-        .row {
-          flex-direction: row;
-        }
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8" id="bio">
-          <h1>Marco Schouten</h1>
-          <p class="text-justify">
-            PhD student in Computer Science at the <a href="https://www.compute.dtu.dk/">Technical University of Denmark</a>, affiliated with the <a href="https://www.aicentre.dk/">Pioneer Centre For AI</a> and the <a href="https://www.belongielab.org/">Belongie Lab</a>. Advised by Prof. <a href="https://people.csail.mit.edu/dimpapa/">Dim Papadopoulos</a> and Prof. <a href="https://sergebelongie.github.io/">Serge Belongie</a>.
+      <header>
+        <h1>Marco Schouten</h1>
+        <img id="portrait" src="images/portrait.jpg" alt="Marco Schouten">
+      </header>
+
+      <main>
+        <section id="bio">
+          <p>
+            PhD student in Computer Science at the <a href="https://www.compute.dtu.dk/">Technical University of Denmark</a>, 
+            affiliated with the <a href="https://www.aicentre.dk/">Pioneer Centre For AI</a> and 
+            the <a href="https://www.belongielab.org/">Belongie Lab</a>.
           </p>
-          <p class="text-justify">
-            Former research intern at the <a href="https://smarc.se/">Swedish Maritime Robotic Centre</a> and <a href="https://www.aptiv.com/">Aptiv PLC</a>.
+          
+          <p>
+            Advised by Prof. <a href="https://people.csail.mit.edu/dimpapa/">Dim Papadopoulos</a> and 
+            Prof. <a href="https://sergebelongie.github.io/">Serge Belongie</a>.
           </p>
+
           <h2>Research Interests</h2>
           <ul>
             <li>Human-in-the-loop learning</li>
             <li>Controllable generative AI</li>
             <li>Stable diffusion</li>
           </ul>
-          <p class="text-center">
-            <a href="https://github.com/marcoschouten">GitHub</a> &nbsp;/&nbsp;
-            <a href="https://twitter.com/marcoschouten_">Twitter</a> &nbsp;/&nbsp;
-            <a href="https://scholar.google.com/citations?user=SdQ_lIIAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-            <a href="https://www.linkedin.com/in/schoutenmarco">LinkedIn</a>
-          </p>
-        </div>
-        <div class="col-md-4" style="z-index:4;">
-          <img alt="profile photo" id="portrait" src="images/portrait.jpg">
-        </div>
-      </div>
+        </section>
+
+        <section id="links">
+          <a href="https://github.com/marcoschouten">GitHub</a>
+          <span class="separator">|</span>
+          <a href="https://twitter.com/marcoschouten_">Twitter</a>
+          <span class="separator">|</span>
+          <a href="https://scholar.google.com/citations?user=SdQ_lIIAAAAJ">Scholar</a>
+          <span class="separator">|</span>
+          <a href="https://www.linkedin.com/in/schoutenmarco">LinkedIn</a>
+        </section>
+      </main>
     </div>
   </body>
 </html>

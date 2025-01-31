@@ -1,0 +1,97 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2a2a2a;
+  --link-color: #0066cc;
+  --link-hover: #003366;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+ul {
+  list-style-position: inside;
+  margin-bottom: 2rem;
+}
+
+#links {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  #portrait {
+    width: 150px;
+    height: 150px;
+  }
+} 
