@@ -1,11 +1,15 @@
 :root {
-  --bg-color: #fafafa;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
   --text-color: #1a1a1a;
-  --link-color: #0066cc;
-  --link-hover: #003d7a;
-  --accent-color: #f0f0f0;
-  --font-mono: 'IBM Plex Mono', 'Fira Code', 'Courier New', monospace;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --text-light: #4a4a4a;
+  --link-color: #2962ff;
+  --link-hover: #0039cb;
+  --accent-color: #e3f2fd;
+  --border-color: #eaeaea;
+  --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 * {
@@ -18,57 +22,94 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-mono);
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.7;
-  padding: 3rem 2rem;
+  padding: 2rem;
   max-width: 100%;
   overflow-x: hidden;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .container {
-  max-width: 650px;
+  max-width: 680px;
   margin: 0 auto;
-  background: white;
+  background: var(--card-bg);
   padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
 header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.header-text {
+  text-align: left;
 }
 
 .greeting {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--link-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-family: var(--font-mono);
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 600;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.02em;
-  color: #000;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  opacity: 0.8;
+}
+
+.social-link {
+  padding: 0.3rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  fill: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  background: var(--accent-color);
+}
+
+.social-link:hover .icon {
+  fill: var(--link-color);
 }
 
 #portrait {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease;
-}
-
-#portrait:hover {
-  transform: translateY(-2px);
+  border: 1px solid var(--border-color);
 }
 
 main {
@@ -76,30 +117,27 @@ main {
 }
 
 h2 {
-  font-family: var(--font-mono);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin: 2.5rem 0 1.5rem;
   letter-spacing: -0.02em;
-  color: #000;
+  color: var(--text-color);
   position: relative;
   display: inline-block;
 }
 
-h2::after {
-  content: '';
+h2::before {
+  content: '##';
   position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 2rem;
-  height: 3px;
-  background: var(--link-color);
-  border-radius: 2px;
+  left: -2rem;
+  color: var(--link-color);
+  opacity: 0.4;
 }
 
 p {
   margin-bottom: 1.5rem;
   line-height: 1.8;
+  color: var(--text-light);
 }
 
 a {
@@ -109,12 +147,12 @@ a {
   font-weight: 500;
   padding: 0.1em 0.2em;
   margin: -0.1em -0.2em;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 a:hover {
   color: var(--link-hover);
-  background-color: var(--accent-color);
+  background: var(--accent-color);
 }
 
 ul {
@@ -127,6 +165,7 @@ li {
   margin-bottom: 0.75rem;
   position: relative;
   padding-left: 1.5rem;
+  color: var(--text-light);
 }
 
 li::before {
@@ -134,60 +173,64 @@ li::before {
   position: absolute;
   left: 0;
   color: var(--link-color);
-  font-weight: 500;
+  opacity: 0.6;
 }
 
-#links {
-  text-align: center;
-  margin-top: 4rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--accent-color);
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-link {
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+.affiliations {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 2.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
 }
 
-.social-link:hover {
-  transform: translateY(-2px);
-  background-color: var(--accent-color);
+.affiliation-link {
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--text-color);
-  transition: fill 0.2s ease;
+.affiliation-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.8;
 }
 
-.social-link:hover .icon {
-  fill: var(--link-color);
+.affiliation-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
 }
 
 @media (max-width: 600px) {
   body {
-    padding: 1.5rem;
-    font-size: 1rem;
+    padding: 1rem;
   }
   
   .container {
     padding: 2rem;
   }
   
-  .greeting {
-    font-size: 1.1rem;
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-text {
+    text-align: center;
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
   }
   
   #portrait {
@@ -195,75 +238,17 @@ li::before {
     height: 160px;
   }
 
-  main {
-    padding: 0;
-  }
-  
-  #links {
-    gap: 1rem;
-  }
-  
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* Add these new styles for affiliations */
-.affiliations {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: var(--bg-color);
-  border-radius: 8px;
-}
-
-.affiliation-link {
-  padding: 0;
-  margin: 0;
-  transition: opacity 0.2s ease;
-}
-
-.affiliation-link:hover {
-  background: none;
-  opacity: 0.8;
-}
-
-.affiliation-logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* Make social media icons smaller */
-.icon {
-  width: 16px;
-  height: 16px;
-}
-
-#links {
-  gap: 1rem;
-}
-
-.social-link {
-  padding: 0.4rem;
-}
-
-@media (max-width: 600px) {
   .affiliations {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
   .affiliation-logo {
-    height: 32px;
+    height: 28px;
   }
   
-  .icon {
-    width: 14px;
-    height: 14px;
+  h2::before {
+    display: none;
   }
 } 
