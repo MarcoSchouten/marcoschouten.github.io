@@ -142,19 +142,34 @@ li::before {
   margin-top: 4rem;
   padding-top: 2.5rem;
   border-top: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.separator {
-  font-family: var(--font-mono);
-  margin: 0 0.75rem;
-  color: #ccc;
+.social-link {
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#links a {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+.social-link:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-color);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-color);
+  transition: fill 0.2s ease;
+}
+
+.social-link:hover .icon {
+  fill: var(--link-color);
 }
 
 @media (max-width: 600px) {
@@ -182,5 +197,14 @@ li::before {
 
   main {
     padding: 0;
+  }
+  
+  #links {
+    gap: 1rem;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
   }
 } 
