@@ -45,6 +45,39 @@ header {
   margin-bottom: 3rem;
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.name-section {
+  text-align: left;
+}
+
+.affiliations {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.affiliation-logo {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.affiliation-link:hover .affiliation-logo {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
 .header-content {
   text-align: left;
   margin-bottom: 2.5rem;
@@ -182,27 +215,6 @@ li::before {
   opacity: 0.6;
 }
 
-.affiliations {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  padding: 1rem;
-}
-
-.affiliation-logo {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(20%);
-  opacity: 0.9;
-}
-
-.affiliation-link:hover {
-  transform: translateY(-1px);
-}
-
 .name-section {
   text-align: left;
   align-self: flex-start;
@@ -216,6 +228,23 @@ li::before {
   
   .container {
     padding: 2rem;
+  }
+  
+  .header-top {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .name-section {
+    text-align: center;
+  }
+  
+  .affiliations {
+    justify-content: center;
+  }
+  
+  .affiliation-logo {
+    height: 28px;
   }
   
   .header-content {
@@ -241,15 +270,6 @@ li::before {
     width: 160px;
     height: 160px;
   }
-
-  .affiliations {
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .affiliation-logo {
-    height: 28px;
-  }
   
   h2::before {
     display: none;
@@ -262,10 +282,5 @@ li::before {
   .icon {
     width: 14px;
     height: 14px;
-  }
-
-  .name-section {
-    text-align: center;
-    align-self: center;
   }
 } 
