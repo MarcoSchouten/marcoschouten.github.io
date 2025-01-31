@@ -207,4 +207,63 @@ li::before {
     width: 18px;
     height: 18px;
   }
+}
+
+/* Add these new styles for affiliations */
+.affiliations {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.affiliation-link {
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.2s ease;
+}
+
+.affiliation-link:hover {
+  background: none;
+  opacity: 0.8;
+}
+
+.affiliation-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Make social media icons smaller */
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+#links {
+  gap: 1rem;
+}
+
+.social-link {
+  padding: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .affiliations {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .affiliation-logo {
+    height: 32px;
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
 } 
