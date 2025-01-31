@@ -46,9 +46,7 @@ header {
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  text-align: center;
   margin-bottom: 2.5rem;
 }
 
@@ -75,21 +73,24 @@ h1 {
 
 .social-links {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-  opacity: 0.8;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .social-link {
-  padding: 0.3rem;
+  padding: 0.4rem;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
 
 .icon {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   fill: var(--text-color);
+  opacity: 0.7;
   transition: all 0.2s ease;
 }
 
@@ -100,6 +101,7 @@ h1 {
 
 .social-link:hover .icon {
   fill: var(--link-color);
+  opacity: 1;
 }
 
 #portrait {
@@ -179,30 +181,22 @@ li::before {
 .affiliations {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: var(--bg-color);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
 }
 
-.affiliation-link {
-  padding: 0;
-  margin: 0;
-  transition: all 0.2s ease;
+.affiliation-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  opacity: 0.85;
 }
 
 .affiliation-link:hover {
   transform: translateY(-1px);
-  opacity: 0.8;
-}
-
-.affiliation-logo {
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(20%);
 }
 
 @media (max-width: 600px) {
@@ -239,16 +233,24 @@ li::before {
   }
 
   .affiliations {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.25rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .affiliation-logo {
-    height: 28px;
+    height: 24px;
   }
   
   h2::before {
     display: none;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
   }
 } 
