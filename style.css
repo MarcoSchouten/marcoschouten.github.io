@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .text-content {
@@ -61,19 +61,16 @@ h1 {
   line-height: 1.2;
 }
 
-.greeting {
-  color: var(--text-light);
-}
-
 .title {
   font-size: 1.1rem;
   color: var(--text-light);
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .affiliations {
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .affiliation-link {
@@ -109,7 +106,7 @@ main {
 h2 {
   font-size: 1.4rem;
   font-weight: 600;
-  margin: 2.5rem 0 1.5rem;
+  margin: 2rem 0 1.5rem;
   letter-spacing: -0.02em;
   color: var(--text-color);
   position: relative;
